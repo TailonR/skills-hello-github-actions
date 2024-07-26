@@ -1,0 +1,15 @@
+name: Determine which branch
+on:
+  pull_request:
+    types: [opened]
+permissions:
+  pull-requests: write
+jobs:
+  build:
+    name: Determine which branch
+    runs-on: ubuntu-latest
+    steps:
+      - run: gh pr comment $PR_URL --body "The branch ${{ github.ref }} "
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR_URL: ${{ github.event.pull_request.html_url }}
