@@ -9,7 +9,7 @@ jobs:
     name: Determine which branch
     runs-on: ubuntu-latest
     steps:
-      - run: gh pr comment $PR_URL --body "The branch ${{ github.ref }} "
+      - run: gh pr comment $PR_URL --body "The branch being merge ${{ github.head_ref }} and the base branch ${{ github.base_ref }}"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           PR_URL: ${{ github.event.pull_request.html_url }}
