@@ -2,7 +2,7 @@
 
 ## How Great GitHub Is
 
-GitHub has revolutionized the way developers collaborate and manage their code. 
+GitHub has revolutionized the way developers collaborate and manage their code.
 As a platform that hosts millions of repositories, GitHub provides a robust 
 version control system that makes it easy to track changes, collaborate with 
 others, and manage projects. Its intuitive interface and powerful features, such 
