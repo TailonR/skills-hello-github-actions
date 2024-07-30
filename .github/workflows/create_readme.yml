@@ -1,0 +1,19 @@
+name: Create Instructions Document
+on:
+  pull_request:
+    types: [closed]
+permissions:
+  pull-requests: write
+jobs:
+  build:
+    name: Get Changed Files
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v2
+
+      - name: View changed files
+        run:  gh pr view ${{ github.event.pull_request.number }} --json files --jq '.files.[].path' > readme.txt
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      
