@@ -12,8 +12,24 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v2
 
+      - name: Get PR information
+        id: pr
+        uses: octokit/request-action@v2.x
+        with:
+          route: GET /repos/${{ github.repository }}/pulls/${{ github.event.pull_request.number }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
       - name: View changed files
         run:  gh pr view ${{ github.event.pull_request.number }} --json files --jq '.files.[].path' > readme.txt
+
+      - name: Commit and push changes
+        run: |
+          git config --global user.name "${{ steps.pr.outputs.data.user.login }}"
+          git config --global user.email "${{ steps.pr.outputs.data.user.email }}"
+          git add readme.txt
+          git commit -m 'Created instructions for vendor'
+          git push
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       
