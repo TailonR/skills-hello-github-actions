@@ -22,6 +22,8 @@ jobs:
 
       - name: View changed files
         run:  gh pr view ${{ github.event.pull_request.number }} --json files --jq '.files.[].path' > readme.txt
+        env:
+          GH_TOKEN: ${{ github.token }}
 
       - name: Commit and push changes
         run: |
