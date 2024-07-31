@@ -6,7 +6,7 @@ GitHub has revolutionized the way developers collaborate and manage their code.
 As a platform that hosts millions of repositories, GitHub provides a robust 
 version control system that makes it easy to track changes, collaborate with 
 others, and manage projects. Its intuitive interface and powerful features, such
-as pull requests, code reviews, and issue tracking, have made it an 
+as pull requests, code reviews, and issue tracking, have made it an
 indispensable tool for developers worldwide. GitHub's integration with various
 CI/CD tools and its extensive ecosystem of plugins and extensions further 
 enhance its capabilities, making it a central hub for software development.
