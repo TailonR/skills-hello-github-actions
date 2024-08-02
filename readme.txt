@@ -1,1 +1,3 @@
-growing_skills.txt
+github_is_great.txt
+making_use_of_new_tools.txt
+using_github_actions.txt
