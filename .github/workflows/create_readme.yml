@@ -2,8 +2,6 @@ name: Create Instructions Document
 on:
   pull_request:
     types: [closed]
-permissions:
-  contents: write
 jobs:
   build:
     name: Get Changed Files
