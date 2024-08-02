@@ -1,2 +1,1 @@
 github_is_great.txt
-growing_skills.txt
