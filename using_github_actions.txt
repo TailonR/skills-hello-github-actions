@@ -3,7 +3,7 @@
 ## How Using GitHub Actions Is So Cool
 
 GitHub Actions is a game-changer for automating workflows and streamlining development processes.
-With GitHub Actions, you can create custom workflows that trigger on specific events, such as push, 
+With GitHub Actions, you can create custom workflows that trigger on specific events, such as push,
 pull request, or issue creation. This powerful feature allows you to automate tasks like running
 tests, deploying applications, and generating documentation. The flexibility and ease of use of
 GitHub Actions make it an invaluable tool for enhancing productivity and ensuring consistent,
