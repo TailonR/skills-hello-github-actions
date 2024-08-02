@@ -38,6 +38,7 @@ jobs:
             git add $FILE
             git commit -m 'Created instructions for vendor'
             git push
+          fi
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       
