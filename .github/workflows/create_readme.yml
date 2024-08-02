@@ -3,7 +3,7 @@ on:
   pull_request:
     types: [closed]
 permissions:
-  pull-requests: write
+  contents: write
 jobs:
   build:
     name: Get Changed Files
